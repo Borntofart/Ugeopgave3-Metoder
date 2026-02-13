@@ -38,7 +38,7 @@ public class Opgave2 {
     }
 
     void printTotal() {
-        System.out.println("Total er: " + assignmentPoints + examPoints + projectPoint);
+        System.out.println("Total er: " + (assignmentPoints + examPoints + projectPoint));
     }
 
     void main () {
