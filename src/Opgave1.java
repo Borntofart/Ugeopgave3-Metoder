@@ -41,7 +41,7 @@ public class Opgave1 {
         balance += 200;
     }
 
-    void main(String[] args) {
+    void main() {
         //Først her jeg opdaget man skulle lave navnet på den i main
         //accountName = "Lucas' Bankkonto"
         deposit100();
