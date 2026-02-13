@@ -57,7 +57,7 @@ public class Opgave4 {
     int overAverage(int[] numbers) {
         int overAverageCount = 0;
         for (int num : numbers) {
-            if (num >= calculateAverage(numbers)) {
+            if (num >= calculateAverage(numbers)) { //brugte alt for lang tid på at finde ud af man skulle bruge >=
                 overAverageCount ++;
             }
         }
