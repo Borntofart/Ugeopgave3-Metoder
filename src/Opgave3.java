@@ -40,7 +40,7 @@ public class Opgave3 {
 
     void main () {
         double finalPrice = finalPriceAfter(basisPrice, discountPercent);
-        System.out.println("Din endelig total du skal betale er: " + finalPrice + "Kr.");
+        System.out.println("Din endelig total er du skal betale er: " + finalPrice + "Kr.");
 
     }
 }

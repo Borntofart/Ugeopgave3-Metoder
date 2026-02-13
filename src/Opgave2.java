@@ -19,6 +19,8 @@
 //Tilføj 30 project points
 //Udskriv totalen
 
+import java.util.Scanner;
+
 //Skal nok have lidt hjælp til hvordan opsætning med public classes skal være fedter rundt i det hahaha
 public class Opgave2 {
     int assignmentPoints;
@@ -41,10 +43,42 @@ public class Opgave2 {
         System.out.println("Total er: " + (assignmentPoints + examPoints + projectPoint));
     }
 
+
+    void addPoints () {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Hvor mange points vil du tilføje?: " );
+        int extraPoints = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Hvilke slags points vil du tilføje?: ");
+        String type = scanner.next();
+        scanner.nextLine();
+        switch (type){
+
+            case "assignment":
+                    assignmentPoints += extraPoints;
+                    break;
+            case "exampoints":
+                    examPoints += extraPoints;
+                    break;
+            case "projectpoints":
+                    projectPoint += extraPoints;
+                    break;
+            default:
+                System.out.println("Cant be added or typo");
+                addPoints();
+                break;
+        }
+
+    }
+
     void main () {
-        addAssignmentPoints(25);
-        addExamPoints(40);
-        addProjectPoints(30);
+        addAssignmentPoints(15);
+        addExamPoints(25);
+        addProjectPoints(15);
+
+        addPoints();
 
         printTotal();
     }
